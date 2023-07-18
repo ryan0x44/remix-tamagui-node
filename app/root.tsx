@@ -23,6 +23,15 @@ export default function App() {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
+        <style
+            dangerouslySetInnerHTML={{
+              __html: tamaguiConfig.getCSS({
+                // if you are using "outputCSS" option, you should use this "exclude"
+                // if not, then you can leave the option out
+                exclude: process.env.NODE_ENV === 'production' ? 'design-system' : null,
+              }),
+            }}
+          />
       </head>
       <body>
         <TamaguiProvider config={tamaguiConfig} disableInjectCSS={true}>
