@@ -12,13 +12,14 @@
     "@remix-run/node": "^1.18.1",
     "@remix-run/react": "^1.18.1",
     "@remix-run/serve": "^1.18.1",
-    "@tamagui/config": "^1.39.6",
-    "@tamagui/web": "^1.39.6",
+    "@tamagui/config": "*",
+    "@tamagui/web": "*",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-native": "npm:react-native-web@^0.19.6",
-    "react-native-web": "^0.19.6"
+    "react-native": "npm:react-native-web@*",
+    "react-native-web": "*",
+    "tamagui": "*"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.18.1",
