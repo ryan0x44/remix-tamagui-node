@@ -1,6 +1,6 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 
-import { Button } from 'tamagui';
+import { YStack, XStack, H1, Paragraph, Separator, Anchor, Button } from 'tamagui';
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -11,34 +11,35 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
-      <Button>Lorem ipsum</Button>
-      <ul>
-        <li>
-          <a
+    <YStack f={1} jc="center" ai="center" p="$4" space>
+      <YStack space="$4" maw={600}>
+        <H1 ta="center">Welcome to Tamagui on Remix!</H1>
+        <Paragraph ta="center">
+          Here's a basic starter to show navigating from one screen to another. This screen uses the
+          same code on Next.js and React Native.
+        </Paragraph>
+
+        <Separator />
+        <Paragraph ta="center">
+          Made by{' '}
+          <Anchor color="$color12" href="https://twitter.com/natebirdman" target="_blank">
+            @natebirdman
+          </Anchor>
+          ,{' '}
+          <Anchor
+            color="$color12"
+            href="https://github.com/tamagui/tamagui"
             target="_blank"
-            href="https://remix.run/tutorials/blog"
             rel="noreferrer"
           >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+            give it a ⭐️
+          </Anchor>
+        </Paragraph>
+      </YStack>
+
+      <XStack>
+        <Button>Link to user</Button>
+      </XStack>
+    </YStack>
   );
 }
